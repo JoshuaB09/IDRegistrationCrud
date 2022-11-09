@@ -1,11 +1,13 @@
 <?php
-	if (!empty($_SERVER['HTTPS']) && ('on' == $_SERVER['HTTPS'])) {
-		$uri = 'https://';
-	} else {
-		$uri = 'http://';
-	}
-	$uri .= $_SERVER['HTTP_HOST'];
-	header('Location: '.$uri.'/dashboard/');
-	exit;
+include 'functions.php';
 ?>
-Something is wrong with the XAMPP installation :-(
+
+<?=template_header('Home')?>
+
+<div class="content">
+	<h2>Home</h2>
+	<p>Welcome!</p>
+		<a href="create.php" class="create-contact">New Students is enrolled!</a>
+</div>
+
+<?=template_footer()?>
